@@ -1,0 +1,1 @@
+{"version":3,"file":"HashMap.d.ts","sourceRoot":"","sources":["../../src/hashmap/HashMap.ts"],"names":[],"mappings":"AAQA,qBAAa,OAAO;IAClB,OAAO,CAAC,OAAO,CAAmB;IAClC,OAAO,CAAC,QAAQ,CAAS;IACzB,OAAO,CAAC,IAAI,CAAS;IAErB,YAAY,QAAQ,SAAK,EAIxB;IAED,GAAG,CAAC,GAAG,EAAE,MAAM,EAAE,KAAK,EAAE,MAAM,GAAG,IAAI,CAoBpC;IAGD,KAAK,SASJ;CACF"}
