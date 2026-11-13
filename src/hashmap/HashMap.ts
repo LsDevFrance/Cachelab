@@ -94,6 +94,26 @@ export class HashMap {
     return this.size;
   }
 
+  // comme ca on peut voir les buckets
+  debugBuckets(): {
+    capacity: number;
+    size: number;
+    buckets: { index: number; entries: { key: string; value: string }[] }[];
+  } {
+    const buckets: { index: number; entries: { key: string; value: string }[] }[] =
+      [];
+    for (let index = 0; index < this.capacity; index++) {
+      const entries: { key: string; value: string }[] = [];
+      let current = this.buckets[index] ?? null;
+      while (current !== null) {
+        entries.push({ key: current.key, value: current.value });
+        current = current.next;
+      }
+      buckets.push({ index, entries });
+    }
+    return { capacity: this.capacity, size: this.size, buckets };
+  }
+
   // GESTION MÉMOIRE : double la capacité et redistribue les clés
   private resize(): void {
     const oldBuckets = this.buckets;
